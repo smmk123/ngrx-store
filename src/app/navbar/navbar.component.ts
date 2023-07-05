@@ -17,9 +17,9 @@ export class NavbarComponent {
         routerLink: '/',
       },
       {
-        label: 'About',
+        label: 'Products',
         icon: 'pi pi-info',
-        routerLink: '/about',
+        routerLink: '/products',
       },
       {
         label: 'Contact',

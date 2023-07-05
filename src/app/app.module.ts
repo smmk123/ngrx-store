@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { CarouselModule } from 'primeng/carousel';
+import { ProductsPageComponent } from './products-page/products-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CarouselModule } from 'primeng/carousel';
     LoginComponent,
     NavbarComponent,
     HomeComponent,
-    HeroSectionComponent
+    HeroSectionComponent,
+    ProductsPageComponent
   ],
   imports: [
     BrowserModule,
