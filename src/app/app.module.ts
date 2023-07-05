@@ -11,13 +11,16 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { LoginComponent } from './auth/login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { HeroSectionComponent } from './hero-section/hero-section.component';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    HeroSectionComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +28,7 @@ import { HomeComponent } from './home/home.component';
     BrowserAnimationsModule,
     MenubarModule,
     ButtonModule,
+    CarouselModule,
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],

@@ -1,0 +1,9 @@
+<p-carousel [value]="banners" [numVisible]="1" [numScroll]="1">
+    <ng-template let-banner pTemplate="item">
+        <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+            <div class="mb-3">
+      <img [src]="banner.imageUrl" alt="Banner Image">
+    </div>
+</div>
+    </ng-template>
+  </p-carousel>
