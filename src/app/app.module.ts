@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
 
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
@@ -14,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { CarouselModule } from 'primeng/carousel';
 import { ProductsPageComponent } from './products-page/products-page.component';
+import { ProductService } from './services/products.service';
 
 @NgModule({
   declarations: [
@@ -31,10 +33,11 @@ import { ProductsPageComponent } from './products-page/products-page.component';
     MenubarModule,
     ButtonModule,
     CarouselModule,
+    HttpClientModule,
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
