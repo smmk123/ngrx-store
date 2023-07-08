@@ -1,17 +1,12 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { Product } from '../store/products.state';
 import { ProductService } from '../services/products.service';
+import { getProducts } from '../store/products.selectors';
+import { loadProducts } from '../store/products.actions';
 
-interface Product {
-  _id: {
-    $oid: string;
-  };
-  name: string;
-  price: number;
-  stock: number;
-  pictureURL: string;
-  description: string;
-  __v: number;
-}
+
 @Component({
   selector: 'app-products-page',
   templateUrl: './products-page.component.html',
@@ -20,20 +15,24 @@ interface Product {
 
 export class ProductsPageComponent {
   
-products: Product[] = [];
-constructor(private productService: ProductService) { }
-ngOnInit() {
-  this.productService.getProducts().subscribe(
-    (response) => {
-      this.products = response.results;
-      console.log(response.results);
-    },
-    (error) => {
-      // Handle any error that occurred during the API request
-      console.error(error);
-    }
-  );
+  products$: Observable<Product[]>;
+constructor(private store: Store) {
+  this.products$ = this.store.select(getProducts);
 }
+ngOnInit(): void {
+  this.store.dispatch(loadProducts());
+}
+// ngOnInit() {
+//   this.productService.getProducts().subscribe(
+//     (response) => {
+//       this.products = response.results;
+//       console.log(response.results);
+//     },
+//     (error) => {
+//       console.error(error);
+//     }
+//   );
+// }
 // this.productService.getProducts().subscribe(
 //   (products) => {
 //     this.products = products;

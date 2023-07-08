@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,7 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { CarouselModule } from 'primeng/carousel';
 import { ProductsPageComponent } from './products-page/products-page.component';
 import { ProductService } from './services/products.service';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -34,9 +36,11 @@ import { ProductService } from './services/products.service';
     MenubarModule,
     ButtonModule,
     CarouselModule,
+    CardModule,
     HttpClientModule,
     StoreModule.forRoot({products: productReducer}, {}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    EffectsModule.forRoot([])
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

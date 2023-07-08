@@ -3,7 +3,12 @@ export interface ProductState {
   }
   
   export interface Product {
-    id: number;
+    id: number | undefined;
     name: string;
     price: number;
+    stock: number;
+    pictureURL: string;
+    description: string;
+    __v: number;
   }
+
