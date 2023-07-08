@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
+import { productReducer } from './store/products.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { LoginComponent } from './auth/login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -34,7 +35,7 @@ import { ProductService } from './services/products.service';
     ButtonModule,
     CarouselModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({products: productReducer}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
   providers: [ProductService],
