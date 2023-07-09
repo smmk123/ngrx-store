@@ -19,6 +19,7 @@ import { CarouselModule } from 'primeng/carousel';
 import { ProductsPageComponent } from './products-page/products-page.component';
 import { ProductService } from './services/products.service';
 import { EffectsModule } from '@ngrx/effects';
+import { ProductEffects } from './store/products.effects';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { EffectsModule } from '@ngrx/effects';
     HttpClientModule,
     StoreModule.forRoot({products: productReducer}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([ProductEffects])
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Product } from '../store/products.state';
@@ -13,14 +13,15 @@ import { loadProducts } from '../store/products.actions';
   styleUrls: ['./products-page.component.css']
 })
 
-export class ProductsPageComponent {
+export class ProductsPageComponent implements OnInit {
+products$!: Observable<Product[]>;
   
-  products$: Observable<Product[]>;
-constructor(private store: Store) {
-  this.products$ = this.store.select(getProducts);
+constructor(private store: Store, private productService: ProductService) {
+  
 }
 ngOnInit(): void {
   this.store.dispatch(loadProducts());
+  this.products$ = this.store.select(getProducts);
 }
 // ngOnInit() {
 //   this.productService.getProducts().subscribe(

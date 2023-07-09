@@ -49,6 +49,7 @@ export class ProductService {
         this.store.dispatch(
           loadProductsSuccess({ products: response.results }) 
         );
+        console.log('Products loaded successfully:', response.results);
       })
     );
   } 
