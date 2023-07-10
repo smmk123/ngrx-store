@@ -1,13 +1,11 @@
-<div *ngIf="products$ | async as products">
-  <div class="p-grid">
-    <div class="p-col-12 p-md-4" *ngFor="let product of products">
-      <p-card>
-        <img [src]="product.pictureURL" alt="Product Image" />
-        <h3>{{ product.name }}</h3>
-        <p>{{ product.description }}</p>
-        <p>Price: {{ product.price }}</p>
-        <p>Stock: {{ product.stock }}</p>
-      </p-card>
+<div *ngIf="products$ | async as products" class="grid-container">
+  <div class="p-col-12 p-md-4" *ngFor="let product of products">
+    <div class="card p-card">
+      <img [src]="product.pictureURL" alt="Product Image" />
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <p class="price">Price: {{ product.price }}</p>
+      <p class="stock">Stock: {{ product.stock }}</p>
     </div>
   </div>
 </div>

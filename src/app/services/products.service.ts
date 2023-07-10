@@ -21,7 +21,6 @@ export class ProductService {
   constructor(private http: HttpClient, private store: Store<ProductState>) {}
 
   getProducts(): Observable<ProductApiResponse> {
-    this.store.dispatch(loadProducts()); 
   
     return this.http.get<ProductApiResponse>(this.apiUrl).pipe(
       catchError((error) => {
@@ -31,20 +30,21 @@ export class ProductService {
         );
         return of({ results: [] }); 
       }),
-      map((response) => {
-        const products = response.results.map((productApi) => {
-          return {
-            id: productApi.id,
-            name: productApi.name,
-            price: productApi.price,
-            stock: productApi.stock,
-            pictureURL: productApi.pictureURL,
-            description: productApi.description,
-            __v: productApi.__v,
-          };
-        });
-        return { ...response, results: products };
-      }),
+      map((response) => { return response;} ),
+      // map((response) => {
+      //   const products = response.results.map((productApi) => {
+      //     return {
+      //       id: productApi.id,
+      //       name: productApi.name,
+      //       price: productApi.price,
+      //       stock: productApi.stock,
+      //       pictureURL: productApi.pictureURL,
+      //       description: productApi.description,
+      //       __v: productApi.__v,
+      //     };
+      //   });
+      //   return { ...response, results: products };
+      // }),
       tap((response) => {
         this.store.dispatch(
           loadProductsSuccess({ products: response.results }) 

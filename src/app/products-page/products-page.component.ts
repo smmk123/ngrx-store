@@ -38,6 +38,5 @@ ngOnInit(): void {
 //   (products) => {
 //     this.products = products;
 //   },
-//   // Error handling remains the same
 // );
 }
