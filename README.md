@@ -1,27 +1,88 @@
-# NgrxStore
+# My Angular Store
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+This is a sample e-commerce store built with Angular. It utilizes NgPrime for UI components, NgRx for state management, and RxJS for API data formatting.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- View a list of products
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone the repository:
 
-## Build
+   ```bash
+   git clone https://github.com/smmk123/ngrx-store.git
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Install dependencies:
 
-## Running unit tests
+   ```bash
+   cd my-angular-store
+   npm install
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Start the development server:
 
-## Running end-to-end tests
+   ```bash
+   ng serve
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   The application will be running at `http://localhost:4200`.
 
-## Further help
+## Usage
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Open your web browser and navigate to `http://localhost:4200`.
+- Browse through the list of products, filter them by category, and add items to the cart.
+- View and update the cart by clicking on the cart icon in the navigation bar.
+- Proceed to the checkout page to complete the order.
+
+## Technologies Used
+
+- Angular
+- Ng Prime
+- NgRx (Redux)
+- HTML
+- CSS
+- TypeScript
+
+## Folder Structure
+
+```
+my-angular-store/
+  ├── src/
+  │   ├── app/
+  │   │   ├── components/
+  │   │   ├── services/
+  │   │   ├── store/
+  │   │   ├── app.component.html
+  │   │   ├── app.component.scss
+  │   │   └── ...
+  │   ├── assets/
+  │   └── ...
+  ├── angular.json
+  ├── package.json
+  └── ...
+```
+
+## Future Improvements
+
+Features coming soon:
+
+- shopping cart
+- user authentication
+- admin features
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature/bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your forked repository.
+5. Submit a pull request to the main repository.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+```
