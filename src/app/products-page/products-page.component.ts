@@ -23,6 +23,7 @@ ngOnInit(): void {
   this.store.dispatch(loadProducts());
   this.products$ = this.store.select(getProducts);
 }
+// old code that was replaced by ngrx
 // ngOnInit() {
 //   this.productService.getProducts().subscribe(
 //     (response) => {
