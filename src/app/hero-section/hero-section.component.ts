@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero-section',
@@ -11,9 +12,13 @@ export class HeroSectionComponent implements OnInit {
     { imageUrl: './assets/images/688-2000x1000.jpg' },
     { imageUrl: './assets/images/1038-2000x1000.jpg' }
   ];
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  redirectToShop(): void {
+    this.router.navigate(['/products']);
   }
 
 }

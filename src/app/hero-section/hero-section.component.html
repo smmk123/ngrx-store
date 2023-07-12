@@ -3,6 +3,13 @@
         <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
             <div class="mb-3">
                 <img [src]="banner.imageUrl" alt="Banner Image">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                      <h2>Welcome to My Store</h2>
+                      <p>Discover the latest products and enjoy an amazing shopping experience.</p>
+                      <button class="hero-button p-button p-component" (click)="redirectToShop()">Shop Now</button>
+                    </div>
+                  </div>
             </div>
         </div>
     </ng-template>
