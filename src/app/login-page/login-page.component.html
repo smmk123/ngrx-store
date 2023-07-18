@@ -1,14 +1,18 @@
-<div class="login-container">
+<div class="login-container p-d-flex p-flex-column p-jc-center p-ai-center">
   <h1>Login</h1>
-  <form>
-    <div class="form-group">
-      <label for="username">Username</label>
-      <input type="text" pInputText id="username" [(ngModel)]="username" name="username" required>
+  <form class="login-form p-d-flex p-flex-column p-ai-center" (ngSubmit)="login()">
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon">
+        <i class="pi pi-user"></i>
+      </span>
+      <input type="text" pInputText id="username" [(ngModel)]="username" name="username" placeholder="Username" required>
     </div>
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" pInputText id="password" [(ngModel)]="password" name="password" required>
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon">
+        <i class="pi pi-lock"></i>
+      </span>
+      <input type="password" pInputText id="password" [(ngModel)]="password" name="password" placeholder="Password" required>
     </div>
-    <button pButton type="submit" label="Login" (click)="login()"></button>
+    <button pButton type="submit" label="Login" class="login-button p-button-raised p-button-rounded"></button>
   </form>
 </div>

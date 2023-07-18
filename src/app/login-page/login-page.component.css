@@ -1,28 +1,32 @@
 .login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 16px;
-  }
-  
-  .login-form p-inputText {
-    width: 300px;
-    margin-bottom: 16px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
-  .login-form p-password {
-    width: 300px;
-    margin-bottom: 16px;
-  }
-  
-  .login-button {
-    width: 150px;
-  }
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+  width: 300px;
+}
+
+.p-inputgroup-addon {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #495057;
+}
+
+.p-inputtext {
+  width: 100%;
+}
+
+.login-button {
+  width: 150px;
+  margin-top: 16px;
+  color:blue;
+}
