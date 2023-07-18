@@ -7,8 +7,8 @@ import {
   loadProducts,
   loadProductsSuccess,
   loadProductsFailure,
-} from '../store/products.actions';
-import { ProductState, Product } from '../store/products.state';
+} from '../store//products/products.actions';
+import { ProductState, Product } from '../store/products/products.state';
 
 interface ProductApiResponse {
   results: Product[];

@@ -22,9 +22,9 @@ export class NavbarComponent {
         routerLink: '/products',
       },
       {
-        label: 'Contact',
+        label: 'login',
         icon: 'pi pi-envelope',
-        routerLink: '/contact',
+        routerLink: '/login',
       },
     ];
   }

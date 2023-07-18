@@ -1,0 +1,28 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+  }
+  
+  .login-form p-inputText {
+    width: 300px;
+    margin-bottom: 16px;
+  }
+
+  .login-form p-password {
+    width: 300px;
+    margin-bottom: 16px;
+  }
+  
+  .login-button {
+    width: 150px;
+  }

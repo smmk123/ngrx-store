@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { map, catchError, mergeMap } from 'rxjs/operators';
-import { ProductService } from '../services/products.service';
+import { ProductService } from '../../services/products.service';
 import { of } from 'rxjs';
 import {
   loadProducts,

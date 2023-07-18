@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Product } from '../store/products.state';
+import { Product } from '../store/products/products.state';
 import { ProductService } from '../services/products.service';
-import { getProducts } from '../store/products.selectors';
-import { loadProducts } from '../store/products.actions';
+import { getProducts } from '../store/products/products.selectors';
+import { loadProducts } from '../store/products/products.actions';
 
 
 @Component({
